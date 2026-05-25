@@ -8,6 +8,8 @@ import {
   Shield, ChevronRight, Clock, Filter,
 } from "lucide-react";
 
+const faviconUrl = `${import.meta.env.BASE_URL}favicon.png`;
+
 const CSS = `
   @keyframes float-a { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
   @keyframes float-b { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-11px)} }
@@ -253,11 +255,10 @@ const CSS = `
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 28px;
-    height: 28px;
-    border-radius: 8px;
-    background: rgba(239,68,68,0.08);
-    border: 1px solid #ef4444;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: 0;
     color: #ef4444;
     display: flex;
     align-items: center;
@@ -265,7 +266,7 @@ const CSS = `
     cursor: pointer;
     opacity: 0;
     transform: scale(0.86);
-    transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
     z-index: 40;
   }
 
@@ -275,8 +276,7 @@ const CSS = `
   }
 
   .card-stack-close:hover {
-    background: rgba(239,68,68,0.16);
-    border-color: #ef4444;
+    color: #fca5a5;
   }
 
   .stack-card:hover .layer:not(.selected) {
@@ -589,7 +589,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-5 lg:px-8">
             <div className="flex items-center justify-between h-[62px]">
               <div className="flex items-center gap-2.5">
-                <img src="/favicon.png" alt="Solvevare" className="w-8 h-8 rounded-lg" />
+                <img src={faviconUrl} alt="Solvevare" className="w-8 h-8 rounded-lg" />
                 <span className="text-base font-bold tracking-tight">Solvevare</span>
               </div>
 
@@ -1601,7 +1601,7 @@ export default function App() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
               <div className="col-span-2">
                 <div className="flex items-center gap-2.5 mb-4">
-                  <img src="/favicon.png" alt="Solvevare" className="w-8 h-8 rounded-lg" />
+                  <img src={faviconUrl} alt="Solvevare" className="w-8 h-8 rounded-lg" />
                   <span className="text-base font-bold">Solvevare</span>
                 </div>
                 <p className="text-sm text-white/38 leading-relaxed max-w-[260px]">
