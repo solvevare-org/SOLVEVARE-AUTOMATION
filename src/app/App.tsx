@@ -905,7 +905,8 @@ export default function App() {
                  Find Out Exactly How Much Revenue <span className="tg">You’re Losing</span>
                 </h3>
                 <p className="text-white/50 text-sm leading-relaxed max-w-2xl">
-                 take a free audit to see how much you lose on dead leads which they have to give us their email for and basically get a calculator that shows them exactly how much revenue they're leaking through unqualified leads. They answer 8 to 10 questions about their average ticket size, how many leads come in monthly, what percentage are actually qualified and what their close rate is. At the end it spits out an estimated number — "you're losing approximately $X per month in wasted sales time.
+                 
+Get a free Lead Leakage Audit and discover how much revenue is slipping through the cracks. Simply answer 8–10 quick questions about your average deal value, monthly lead volume, lead qualification rate, and sales close rate. In exchange for your email, our calculator analyzes your numbers and instantly reveals an estimated amount of revenue you're losing each month due to unqualified leads and wasted sales effort—giving you a clear picture of the hidden cost of inefficient lead management.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-3">
                   {["Avg. ticket size", "Monthly leads", "Qualification rate", "Close rate"].map((q) => (
