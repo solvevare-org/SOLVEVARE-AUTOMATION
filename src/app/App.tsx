@@ -253,10 +253,11 @@ const CSS = `
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 24px;
-    height: 24px;
-    background: transparent;
-    border: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(239,68,68,0.08);
+    border: 1px solid #ef4444;
     color: #ef4444;
     display: flex;
     align-items: center;
@@ -264,7 +265,7 @@ const CSS = `
     cursor: pointer;
     opacity: 0;
     transform: scale(0.86);
-    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
     z-index: 40;
   }
 
@@ -274,7 +275,8 @@ const CSS = `
   }
 
   .card-stack-close:hover {
-    color: #f87171;
+    background: rgba(239,68,68,0.16);
+    border-color: #ef4444;
   }
 
   .stack-card:hover .layer:not(.selected) {
@@ -551,13 +553,13 @@ export default function App() {
     {
       name: "Starter", price: "$2,999", period: "/mo", popular: false, color: "#06b6d4",
       desc: "For businesses ready to stop losing leads",
-      features: ["AI Cold Calling (500 calls/mo)", "CRM Automation Setup", "Missed Call Recovery", "Email Sequences (3-step)", "Monthly Performance Report", "Dedicated Onboarding Call"],
+      features: ["AI Cold Calling (500 mins/mo)", "CRM Automation Setup", "Missed Call Recovery", "Email Sequences (3-step)", "Monthly Performance Report", "Dedicated Onboarding Call"],
       cta: "Get Started",
     },
     {
       name: "Growth", price: "$5,999", period: "/mo", popular: true, color: "#3b82f6",
       desc: "Full automation for scaling businesses",
-      features: ["Everything in Starter", "AI Caller (2,000 calls/mo)", "LinkedIn Outreach System", "Google Ads Management", "WhatsApp Automation", "Lead Reactivation Campaigns", "Weekly Strategy Calls", "Dedicated Account Manager"],
+      features: ["Everything in Starter", "AI Caller (2,000 mins/mo)", "LinkedIn Outreach System", "Google Ads Management", "WhatsApp Automation", "Lead Reactivation Campaigns", "Weekly Strategy Calls", "Dedicated Account Manager"],
       cta: "Start Scaling",
     },
     {
@@ -587,9 +589,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-5 lg:px-8">
             <div className="flex items-center justify-between h-[62px]">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg,#3b82f6,#8b5cf6)", boxShadow: "0 0 22px rgba(59,130,246,.4)" }}>
-                  <Zap className="w-4 h-4 text-white" />
-                </div>
+                <img src="/favicon.png" alt="Solvevare" className="w-8 h-8 rounded-lg" />
                 <span className="text-base font-bold tracking-tight">Solvevare</span>
               </div>
 
@@ -1250,7 +1250,7 @@ export default function App() {
                             closeCardPopup();
                           }}
                         >
-                          <X className="w-5 h-5" />
+                          <X className="w-4 h-4" />
                         </button>
                       )}
 
@@ -1601,9 +1601,7 @@ export default function App() {
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
               <div className="col-span-2">
                 <div className="flex items-center gap-2.5 mb-4">
-                  <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg,#3b82f6,#8b5cf6)", boxShadow: "0 0 20px rgba(59,130,246,.32)" }}>
-                    <Zap className="w-4 h-4 text-white" />
-                  </div>
+                  <img src="/favicon.png" alt="Solvevare" className="w-8 h-8 rounded-lg" />
                   <span className="text-base font-bold">Solvevare</span>
                 </div>
                 <p className="text-sm text-white/38 leading-relaxed max-w-[260px]">
@@ -1614,7 +1612,7 @@ export default function App() {
               {[
                 { heading: "Systems",  links: ["AI Cold Calling", "CRM Automation", "Lead Generation", "AI Receptionist"] },
                 { heading: "Company",  links: ["About", "Case Studies", "Careers", "Blog"] },
-                { heading: "Contact",  links: ["Book A Call", "hello@solvevare.com", "Support", "Partners"] },
+                { heading: "Contact",  links: ["Book A Call", "info@solvevare.com", "Support", "Partners"] },
               ].map((col) => (
                 <div key={col.heading}>
                   <h4 className="text-sm font-semibold mb-4">{col.heading}</h4>
